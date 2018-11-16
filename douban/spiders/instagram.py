@@ -7,7 +7,7 @@ import requests
 class InstagramSpider(scrapy.Spider):
     name = 'instagram'
     allowed_domains = ['www.instagram.com']
-    start_urls = ['https://www.instagram.com/explore/tags/pishposh/?__a=1']
+    start_urls = ['https://www.instagram.com/explore/tags/'+i.strip()+'/?__a=1' for i in open('tags/update.txt').readlines()]
 
 
 #get all image
@@ -29,7 +29,7 @@ class InstagramSpider(scrapy.Spider):
                     "comment":comment,
                     "media_url":media_url}
 
-            yield  Request(base_url+ 'p/'+shortcode+"/?__a=1",meta=data,callback=self.parse_post)
+            yield  Request(base_url+ 'p/'+shortcode+"/?__a=1",meta=data,callback=self.parse_post, dont_filter=True)
 
 ## get post
     def parse_post(self,response):
