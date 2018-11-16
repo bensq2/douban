@@ -29,33 +29,39 @@ class InstagramSpider(scrapy.Spider):
                     "comment":comment,
                     "media_url":media_url}
 
+
             yield  Request(base_url+ 'p/'+shortcode+"/?__a=1",meta=data,callback=self.parse_post, dont_filter=True)
 
 ## get post
     def parse_post(self,response):
         graphql = json.loads(response.text)
         media = graphql['graphql']['shortcode_media']
+        display_url = media['display_url']
+        response.meta['display_url']=display_url
+        data = response.meta
         location = media.get('location', {})
+
         if location is not None:
             loc_id = location.get('id', 0)
 
-            request= Request("https://www.instagram.com/explore/locations/" + loc_id + "/?__a=1",
+            request= Request("https://www.instagram.com/explore/locations/" + loc_id + "/?__a=1",meta =data,
                                      callback=self.parse_post_location, dont_filter=True)
-            request.meta['media'] = media
             yield request
       #  else:
             media['location'] = {}
+            yield data
          #   yield self.makePost(media)
 
 
         #get location
     def parse_post_location(self,response):
-        media = response.meta['media']
         location = json.loads(response.text)
         location_name = location['graphql']['location']['name']
         locaiton_lat = location['graphql']['location']['lat']
         location_lng = location['graphql']['location']['lng']
-        print(location_name,location_lng,locaiton_lat)
+        response.meta['locaiton_lat']=location_lng
+
+        print(response.meta)
         media['location'] = location
         return None
      #   yield self.makePost(media)

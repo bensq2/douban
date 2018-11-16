@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e8935ac-ba0d-41eb-b52f-2bd4aff9ef57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tags/update.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/douban/spiders/instagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/douban/spiders/instagram.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,12 +39,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="64" />
-          <entry key="py" value="2791" />
+          <entry key="py" value="2969" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2855" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="Python" value="3033" />
         </counts>
       </usages-collector>
     </session>
@@ -119,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/douban/spiders/instagram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="21" />
+            <state relative-caret-position="405">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -131,7 +130,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tags/update.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -181,8 +180,8 @@
         <option value="$PROJECT_DIR$/douban/middlewares.py" />
         <option value="$PROJECT_DIR$/douban/settings.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/douban/spiders/instagram.py" />
         <option value="$PROJECT_DIR$/tags/update.txt" />
+        <option value="$PROJECT_DIR$/douban/spiders/instagram.py" />
       </list>
     </option>
   </component>
@@ -304,6 +303,14 @@
       <option name="presentableId" value="Default" />
       <updated>1542268080498</updated>
     </task>
+    <task id="LOCAL-00001" summary="修改start_urls">
+      <created>1542359345866</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542359345867</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -337,6 +344,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改start_urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改start_urls" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
@@ -417,20 +428,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/douban/spiders/instagram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="21" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tags/update.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/douban/spiders/instagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
